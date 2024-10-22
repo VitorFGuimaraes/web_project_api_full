@@ -18,7 +18,7 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 dotenv.config();
 
-mongoose.connect(process.env.MONGO_DB);
+mongoose.connect(process.env.MONGO_DB || 'mongodb://localhost:27017/aroundb');
 
 const app = express();
 
